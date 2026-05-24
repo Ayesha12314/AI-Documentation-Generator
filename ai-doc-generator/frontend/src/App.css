@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
+.app {
+  padding: 40px 30px;  /* increase top padding */
+  text-align: center; 
+}
+
+.app h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 20px;
+  line-height: 1.4;
+  font-family: 'Poppins', sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+
+  /* ✅ FIX */
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  display: inline-block; /* 🔥 IMPORTANT */
+}
+.subtitle {
+  text-align: center;
+  color: #94a3b8;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+.container {
+  display: flex;
+  gap: 25px;
+}
+
+.left-panel,
+.right-panel {
+  flex: 1;
+  background: rgba(30, 41, 59, 0.6);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.15);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+textarea {
+  width: 100%;
+  height: 350px;
+  margin-top: 20px;
+  background: #020617;
+  color: #e2e8f0;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 15px;
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  background: #020617;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 350px;
+  color: #cbd5f5;
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.6);
+}
+
+pre {
+  white-space: pre-wrap;
+  line-height: 1.7;
+  background: #0f172a;
+  padding: 20px;
+  border-radius: 10px;
+  min-height: 350px;
+}
+.badges {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.badges span {
+  background: rgba(59, 130, 246, 0.2);
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+.emoji {
+ margin-right: 10px;
+
+  /* 🔥 FORCE REAL EMOJI RENDERING */
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+  
+  /* prevent styles affecting it */
+  color: initial;
+  filter: none;
+
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+
+  font-size: 3rem;
+  font-weight: 700;
+
+  background: linear-gradient(to right, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 🔥 THIS IS THE REAL FIX */
+.emoji {
+  font-size: 2.5rem;
+
+  /* FORCE COLOR EMOJI */
+  font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji";
+
+  /* BREAK ALL INHERITANCE */
+  all: unset;
+
+  /* restore needed styles */
+  display: inline-block;
+}
